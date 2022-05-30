@@ -6,11 +6,11 @@ import HeaderSearchBox from './HeaderSearchBox'
 
 export const Header = () => {
     return (
-        <div className='w-full h-[55px] bg-primary-dark grid grid-flow-col align-middle items-center py-2'>
-            <div className='h-full pl-2 w-fit'>
+        <div className='fixed left-0 top-0 w-full h-[50px] grid grid-flow-col bg-primary-grey px-2 align-middle items-center py-2 shadow-lg z-50 md:px-1  '>
+            <div className='h-full w-fit '>
                 <HeaderLeftButtons />
             </div>
-            <div className='h-full w-full '>
+            <div className='h-full w-full md:hidden '>
                 <HeaderSearchBox />
             </div>
             <div className='h-full flex justify-end'>
