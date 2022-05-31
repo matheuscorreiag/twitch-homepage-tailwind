@@ -2,13 +2,15 @@ import { ArrowsHorizontal } from 'phosphor-react'
 import React, { useState } from 'react'
 import { Channel } from './Channel';
 
-export const Sidebar = () => {
+interface SidebarProps {
+  isCollapsed: boolean
+  setIsCollapsed: () => void
+}
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
+export const Sidebar = ({ isCollapsed, setIsCollapsed }: SidebarProps) => {
 
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  }
+
+
 
 
 
@@ -32,13 +34,13 @@ export const Sidebar = () => {
 
   return (
     <div className=
-      {` bg-secoundary-grey h-screen w-[240px] relative left-0 top-[50px] overflow-y-auto text-white ${isCollapsed ? 'w-[50px] p-0 ' : 'w-60 md:w-[50px] md:p-0'} `} >
+      {` bg-secoundary-grey h-full w-[240px] fixed left-0 top-[50px] overflow-hidden text-white z-50 ${isCollapsed ? 'w-[50px] p-0 ' : 'w-60 md:w-[50px] md:p-0'} `} >
 
       <header className={`grid grid-flow-col md:hidden  ${isCollapsed ? 'place-items-center' : 'pt-3 pl-3'}`}>
         <span className={`font-semibold text-xs flex items-center ${isCollapsed ? 'hidden' : null}`}>CANAIS RECOMENDADOS</span>
 
         <button className='cursor-pointer flex items-center justify-center w-7 h-8 justify-self-center mt-1 hover:bg-zinc-700  hover:bg-opacity-40 hover:rounded-md'>
-          <ArrowsHorizontal size={22} onClick={toggleCollapse} />
+          <ArrowsHorizontal size={22} onClick={setIsCollapsed} />
         </button>
       </header>
 

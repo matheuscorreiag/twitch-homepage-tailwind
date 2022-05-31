@@ -5,5 +5,5 @@
 
 
 body{
-    @apply bg-zinc-900 font-default overflow-hidden;
+    @apply bg-zinc-900 font-default overflow-x-hidden;
 }
