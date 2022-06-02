@@ -25,7 +25,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         'sidebarMain': 'min-content 1fr',
-        'cards': 'repeat(auto-fit, minmax(250px, 1fr))'
+        'cards': 'repeat(auto-fit, minmax(260px, 1fr))'
       }
     },
   },

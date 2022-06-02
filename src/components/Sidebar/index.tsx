@@ -48,21 +48,15 @@ export const Sidebar = ({ isCollapsed, setIsCollapsed }: SidebarProps) => {
         className={`{${isCollapsed ? 'hidden' : 'grid grid-flow-col grid-cols-1 pt-2 items-center'} `}
       >
         {channels.map((channel) => {
-          {
-            console.log(channel.game)
-          }
+
           return <Channel isCollapsed={isCollapsed} game={channel.game} name={channel.name} views={channel.views} key={channel.name} />
         })}
         {channels.map((channel) => {
-          {
-            console.log(channel.game)
-          }
+
           return <Channel isCollapsed={isCollapsed} game={channel.game} name={channel.name} views={channel.views} key={channel.name} />
         })}
         {channels.map((channel) => {
-          {
-            console.log(channel.game)
-          }
+
           return <Channel isCollapsed={isCollapsed} game={channel.game} name={channel.name} views={channel.views} key={channel.name} />
         })}
       </main>
