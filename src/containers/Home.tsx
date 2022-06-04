@@ -19,7 +19,7 @@ export const Home = () => {
                 <div className='w-fit h-full'>
                     <Sidebar isCollapsed={sideBarIsCollapsed} setIsCollapsed={toggleSideBarCollapsed} />
                 </div>
-                <div className={`my-4 md:mx-20 mr-12 h-full ${sideBarIsCollapsed ? 'mx-[70px]' : 'mx-[270px]'}`}>
+                <div className={`grid grid-rows-1 my-4 md:mx-20 mr-12 h-full ${sideBarIsCollapsed ? 'mx-[70px]' : 'mx-[270px]'}`}>
                     <BigLiveChannels />
                     <MainChannels />
                 </div>

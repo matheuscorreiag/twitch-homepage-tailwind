@@ -47,11 +47,11 @@ const channels = [
 
 const MainChannels = () => {
   return (
-    <div className='flex flex-col h-full'>
-      <p className='m-4 text-white font-semibold text-lg l'>Canais ao vivo que achamos que vai gostar</p>
-      <div className='grid grid-cols-cards gap-4 mt-4 gap-y-24'>
+    <div className='flex flex-col h-full pt-20'>
+      <p className='m-4 text-white font-semibold text-lg md:text-base whitespace-nowrap'>Canais ao vivo que achamos que vai gostar</p>
+      <div className='grid grid-cols-cards gap-4 mt-4 gap-y-24 md:grid-cols-2 md:gap-y-28'>
         {channels.map(({ channelName, game, imageUrl, title, views }) => (
-          <ChannelCards imageUrl={imageUrl} views={views} channelName={channelName} game={game} title={title} />
+          <ChannelCards key={channelName} imageUrl={imageUrl} views={views} channelName={channelName} game={game} title={title} />
         ))}
       </div>
       {/* <div className='grid grid-cols-cards gap-4 mt-4 gap-y-24 pt-24'>
